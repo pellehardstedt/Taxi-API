@@ -1,7 +1,7 @@
 Files
 ===============		
 
-server.js
+server.ts
 ---------------	
 This file contains the main entry point for the Express server. It initializes the Express application, sets up middleware for parsing JSON requests, imports route handlers from router.ts, and starts the server listening on the specified port.
 
