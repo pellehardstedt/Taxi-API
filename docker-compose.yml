@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+    app:
+        build: .
+        ports:
+        - "3000:3000"
+        depends_on:
+        - mongo
+        volumes:
+        - ./api:/app/api
+        environment:
+        - MONGO_URI=mongodb://mongo:27017/taxi
+    mongo:
+        image: mongo
+        ports:
+        - "27017:27017"
+        volumes:
+        - mongodb:/data/db
+volumes:
+    mongodb:
+    
